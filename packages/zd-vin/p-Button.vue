@@ -30,11 +30,6 @@ defineProps(
     default:"noRound"
   }
 });
-defineEmits(['handleClick', 'delete'])
-
-function handleClick(e){
-  // console.log('e==='+e)
-}
 </script>
 <style>
 .hy-button{

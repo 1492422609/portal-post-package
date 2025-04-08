@@ -1,10 +1,12 @@
 <template>
-    <!-- <van-switch v-model="checked" active-color="#18AE67" inactive-color="#dcdee0" /> -->
-    <div class="dialog" v-if="modelValue">
-    {{ modelValue }}
+    <!-- <div > -->
+        <van-switch v-model="checked1" active-color="#18AE67" inactive-color="#dcdee0" @click="handleClick"/>
+    <!-- </div> -->
+    <!-- <div class="dialog" v-if="checked">
+    {{ checked }}
     <button class="close" @click="close">关闭</button>
     <h3>我是Demo3子组件</h3>
-  </div>
+  </div> -->
 
   </template>
   
@@ -15,11 +17,15 @@
   </script>
   <script setup>
   import { ref, computed, watch } from 'vue'
-
-defineProps(['modelValue'])
-const emit=defineEmits(['update:modelValue'])
-const close = () => {
-    emit('update:modelValue', false)
+const checked1 = ref(true)
+// defineProps(['checked'])
+const props = defineProps(['checked'])
+console.log('222=='+JSON.stringify(props))
+// checked.value = defineProps(['checked'])
+const emit=defineEmits(['update:checked'])
+const handleClick = () => {
+    emit('update:checked', false)
+    // checked.value = !checked.value
 }
 
   </script>

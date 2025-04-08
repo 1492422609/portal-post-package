@@ -2,7 +2,7 @@
 {
     "name": "portal-post-package",  
     "private": false,       
-    "version": "1.0.4",      
+    "version": "1.0.5",      
     "description": "我创建的第一个组件库", 
     "main": "portal-post-package.js",
     "scripts": {

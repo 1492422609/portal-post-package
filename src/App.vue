@@ -25,7 +25,9 @@
     <i class="iconfont" style="font-size: 27px;color: red;">&#xe748;</i><div style="padding-top:12px">222</div>
   </div>
   <!-- <p-picker></p-picker> -->
-  <p-switch v-model="checked"/>
+  <p-switch v-model="checked"/> <div>{{ checked }}</div>
+ 
+  <p-input></p-input>
 </template>
 <script setup>
 import { ref, computed, watch } from 'vue'
