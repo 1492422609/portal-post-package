@@ -1,5 +1,5 @@
 <template>
-    <span :style="style">{{ name }}</span>
+    <span :style="style" class="iconfont">{{ name }}</span>
   </template>
   
   <script>
@@ -19,9 +19,13 @@
       default: "default",
     },
   });
-  defineEmits(['handleClick', 'delete'])
-  
-  function handleClick(e){
-    // console.log('e==='+e)
-  }
   </script>
+<style>
+.iconfont {
+  font-family: "iconfont" !important;
+  font-size: 16px;
+  font-style: normal;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+</style>

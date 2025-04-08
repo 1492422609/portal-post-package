@@ -1,5 +1,6 @@
 
 import { defineAsyncComponent } from "vue";
+import './assets/iconfont.css'
  
 const components = import.meta.glob("./zd-vin/*.vue");
 const registerGlobalComponent = (app) => {

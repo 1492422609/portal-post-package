@@ -1,6 +1,6 @@
 
 <template>
-  <van-button type="primary" @click="testToast">2244</van-button>
+  <van-button type="primary" @click="testToast">测试toast</van-button>
   <p-Button type="plain" @click="www"> p-button</p-Button>
   <van-button disabled type="primary">禁用状态</van-button>
   <p-Button type="plain" size="large" isRound="round" @click="www"> 测试弹窗</p-Button>
@@ -18,10 +18,18 @@
   <p-toast ref="child"></p-toast>
 
   <test2-dialog :first="first" @handleClose="handleClose">测试</test2-dialog>
+
+  <p-span name ='&#xe75a;' style="font-size: 90px;color: red;"></p-span>
+  <i class="iconfont" style="font-size: 27px;color: red;padding: 12px;">&#xe748;</i>
+  <div>
+    <i class="iconfont" style="font-size: 27px;color: red;">&#xe748;</i><div style="padding-top:12px">222</div>
+  </div>
+  <!-- <p-picker></p-picker> -->
+  <p-switch v-model="checked"/>
 </template>
-<!-- <script></script> -->
 <script setup>
 import { ref, computed, watch } from 'vue'
+const checked = ref(true);
 const visible1 = ref(false)
 function www(){
   console.log(' visible.value = '+visible1.value)
@@ -38,8 +46,18 @@ const handleClose=(val)=>{ //注意这里的参数即是子组件想要传的值
 } 
 const child = ref(null)
 function testToast(){
-  //child.value.testToast22('提示提示问题提示3332222222233333提示提示问题提示3332222222233333提示提示问题提示3332222222233333提示提示问题提示3332222222233333提示提示问题提示3332222222233333提示提示问题提示3332222222233333提示提示问题提示3332222222233333提示提示问题提示3332222222233333提示提示问题提示3332222222233333')
-  child.value.testToast22('提')
+  child.value.childToast('提示提示问题提示3332222222233333提示提示问题提示3332222222233333提示提示问题提示3332222222233333提示提示问题提示3332222222233333提示提示问题提示3332222222233333提示提示问题提示3332222222233333提示提示问题提示3332222222233333提示提示问题提示3332222222233333提示提示问题提示3332222222233333')
+  // child.value.childToast('提示提示问题提示')
+  
 
 }
 </script>
+<style>
+.iconfont {
+  font-family: "iconfont" !important;
+  font-size: 16px;
+  font-style: normal;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+</style>
