@@ -26,28 +26,28 @@ import { Toast } from 'vant';
   //正确icon提示
   function rightToast(data){
     Toast({
-      message: '<div style="padding-top:5px"><i class="iconfont" style="font-size: 27px;color: white;">&#xe746;</i><div style="padding-top:8px">'+data+'</div></div>',
+      message: '<div style="padding-top:5px"><i class="iconfont" style="font-size: 27px;color: white;">&#xe746;</i><div style="padding-top:8px;font-size:16px">'+data+'</div>',
       type: 'html',
     });
   }
   //错误icon提示
   function errorToast(data){
     Toast({
-      message: '<div style="padding-top:5px"><i class="iconfont" style="font-size: 27px;color: white;">&#xe749;</i><div style="padding-top:8px">'+data+'</div></div>',
+      message: '<div style="padding-top:5px"><i class="iconfont" style="font-size: 27px;color: white;">&#xe749;</i><div style="padding-top:8px;font-size:16px">'+data+'</div>',
       type: 'html',
     });
   }
   //加载icon提示
   function loadToast(data){
     Toast({
-      message: '<div style="padding-top:5px"><i class="iconfont" style="font-size: 27px;color: white;">&#xe721;</i><div style="padding-top:8px">'+data+'</div></div>',
+      message: '<div style="padding-top:5px"><i class="iconfont" style="font-size: 27px;color: white;">&#xe721;</i><div style="padding-top:8px;font-size:16px">'+data+'</div>',
       type: 'html',
     });
   }
   //信息icon提示
   function infoToast(data){
     Toast({
-      message: '<div style="padding-top:5px"><i class="iconfont" style="font-size: 27px;color: white;">&#xe743;</i><div style="padding-top:8px">'+data+'</div></div>',
+      message: '<div style="padding-top:5px"><i class="iconfont" style="font-size: 27px;color: white;">&#xe743;</i><div style="padding-top:8px;font-size:16px">'+data+'</div>',
       type: 'html',
     });
   }

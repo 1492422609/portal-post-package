@@ -1,5 +1,5 @@
 <template>
-  <van-button class="hy-button" :class="[size, type, isRound]" @click="handleClick(e)" ><slot></slot></van-button>
+  <van-button class="hy-button" :class="[size, type, isRound]" ><slot></slot></van-button>
 </template>
 
 <script>

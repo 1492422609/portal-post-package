@@ -1,29 +1,40 @@
 <template>
-    <van-cell-group inset>
-  <van-field
-    v-model="username"
-    error
-    required
-    label="用户名"
-    placeholder="请输入用户名"
-  />
-  <van-field
-    v-model="phone"
-    required
-    label="手机号"
-    placeholder="请输入手机号"
-    error-message="手机号格式错误"
-  />
-</van-cell-group>
+    <van-field  class="van-cell-title" label="文本号" :placeholder="placeholder" :required="required"/>
+
   </template>
   
   <script setup>
-
+  import { ref, computed, watch } from 'vue'
   defineProps(
-    {
-    size: {
-      type: String,
-      default: "middle",
-    },
-  });
+  {
+  placeholder: {
+    type: String,
+    default: "",
+  },
+  required: {
+    type: Boolean,
+    default: false,
+  },
+});
   </script>
+<style>
+.van-field__control{
+    /* display: flex; */
+    text-align: right;
+}
+.van-field__control--error{
+    text-align: right;
+}
+.van-field__error-message{
+    text-align: right;
+}
+.van-field__label--required::before{
+    content: '';
+    margin-right:0px;
+}
+.van-field__label--required::after{
+    content: '*';
+    color: red;
+    margin-left:2px;
+}
+</style>
